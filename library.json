@@ -1,0 +1,28 @@
+{
+    "name": "LinearActuator",
+    "version": "1.0.0",
+    "description": "Precise and fast positioning of linear actuators.",
+    "keywords": "control",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tfeldmann/Arduino-LinearActuator.git"
+    },
+    "authors": [
+        {
+            "name": "Thomas Feldmann",
+            "email": "mail@tfeldmann.de",
+            "url": "https://tfeldmann.de",
+            "maintainer": true
+        }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/tfeldmann/Arduino-LinearActuator",
+    "dependencies": [],
+    "frameworks": "arduino",
+    "platforms": "*",
+    "export": {
+        "exclude": [
+            ".github"
+        ]
+    }
+}
