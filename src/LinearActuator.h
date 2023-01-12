@@ -26,7 +26,7 @@ public:
         SPEED,
     };
 
-    LinearActuator(MotorDriver *motor, int pin_pos);
+    LinearActuator(MotorDriver* motor, int pin_pos);
     void update();
 
     // movement
@@ -41,7 +41,7 @@ public:
     bool targetRoughlyReached();
 
 private:
-    MotorDriver *motor_;
+    MotorDriver* motor_;
     PID pid_;
     int pin_pos_;
 

@@ -1,7 +1,7 @@
 {
     "name": "LinearActuator",
     "version": "1.0.0",
-    "description": "Precise and fast positioning of linear actuators.",
+    "description": "Precise and fast positioning of linear actuators (PID control).",
     "keywords": "control",
     "repository": {
         "type": "git",

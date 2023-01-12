@@ -59,8 +59,8 @@ void LinearActuator::update()
     // rough positioning
     if (state_ == State::POSITION_ROUGH)
     {
-        // we must not check for abs(err) <= TOLERANCE here because then if we travel
-        // over the tolerance band we never go into fine positioning.
+        // we must not check for abs(err) <= TOLERANCE here because then if we
+        // travel over the tolerance band we never go into fine positioning.
 
         // start: 100, target: 200, error: 100, 90, 80, ...
         // start: 200, target: 100, error: -100, -90, -80, ...
@@ -102,17 +102,15 @@ void LinearActuator::update()
 bool LinearActuator::targetReached()
 {
     int err = abs(position() - target_pos_);
-    return (
-        state() == LinearActuator::State::IDLE &&
-        err <= LINEAR_ACTUATOR_ROUGH_TOLERANCE_DIGITS);
+    return (state() == LinearActuator::State::IDLE &&
+            err <= LINEAR_ACTUATOR_ROUGH_TOLERANCE_DIGITS);
 }
 
 bool LinearActuator::targetRoughlyReached()
 {
     LinearActuator::State st = state();
     int err = abs(position() - target_pos_);
-    return (
-        (st == LinearActuator::State::IDLE ||
-         st == LinearActuator::State::POSITION_FINE) &&
-        err <= LINEAR_ACTUATOR_ROUGH_TOLERANCE_DIGITS);
+    return ((st == LinearActuator::State::IDLE ||
+             st == LinearActuator::State::POSITION_FINE) &&
+            err <= LINEAR_ACTUATOR_ROUGH_TOLERANCE_DIGITS);
 }
