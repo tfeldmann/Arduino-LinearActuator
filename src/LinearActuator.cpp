@@ -1,7 +1,10 @@
 #include "LinearActuator.h"
 
 LinearActuator::LinearActuator(MotorDriver *motor, int pin_pos)
-    : motor_(motor), pin_pos_(pin_pos), state_(State::IDLE), last_update_(0)
+    : motor_(motor),
+      pin_pos_(pin_pos),
+      state_(State::IDLE),
+      last_update_(0)
 {
     pid_.setParams(5, 5, 0);
     stop();
